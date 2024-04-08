@@ -12,7 +12,8 @@
   border-color: #eed3d7;
 }
 
-p {
-  color: red;
+body {
+  background-color: #0d1217;
+  color: #a6a6a6;
+  text-align: center;
 }
-
