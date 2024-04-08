@@ -41,9 +41,7 @@
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
+            
             {% if request.user.is_authenticated %}
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
@@ -103,6 +101,11 @@
     src="https://www.canva.com/design/DAGB1m8MYJc/cDtDm85Txe9zI2wkUC-nWw/view?embed" controls="0">
   </iframe>
 </div>
+<div style="height: 100px;"></div>
+<h4>Sign-Up</h4>
+<p>To sign up, click the button below:</p>
+<a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}" style="display: inline-block; padding: 10px 20px; background-color: #a6a6a6; color: #0d1217; text-decoration: none; border-radius: 5px; margin-top: 20px;">{% trans "Sign Up" %}</a>
+
 {% endblock content %}
 
     </div> <!-- /container -->
