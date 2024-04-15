@@ -20,18 +20,18 @@ DATABASES["default"]["CONN_MAX_AGE"] = env.int(  # noqa: F405
 
 # CACHES
 # ------------------------------------------------------------------------------
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": env("REDIS_URL"),
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#CACHES = {
+    #"default": {
+        #"BACKEND": "django_redis.cache.RedisCache",
+        #"LOCATION": env("REDIS_URL"),
+        #"OPTIONS": {
+           # "CLIENT_CLASS": "django_redis.client.DefaultClient",
             # Mimicing memcache behavior.
             # http://niwinz.github.io/django-redis/latest/#_memcached_exceptions_behavior
-            "IGNORE_EXCEPTIONS": True,
-        },
-    }
-}
+           # "IGNORE_EXCEPTIONS": True,
+       # },
+    #}
+#}
 
 # SECURITY
 # ------------------------------------------------------------------------------
@@ -114,16 +114,16 @@ ADMIN_URL = env("DJANGO_ADMIN_URL")
 # Anymail (Mailgun)
 # ------------------------------------------------------------------------------
 # https://anymail.readthedocs.io/en/stable/installation/#installing-anymail
-INSTALLED_APPS += ["anymail"]  # noqa: F405
-EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
+#INSTALLED_APPS += ["anymail"]  # noqa: F405
+#EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 # https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
-ANYMAIL = {
-    "MAILGUN_API_KEY": env("MAILGUN_API_KEY"),
-    "MAILGUN_SENDER_DOMAIN": env("MAILGUN_DOMAIN"),
-    "MAILGUN_API_URL": env(
-        "MAILGUN_API_URL", default="https://api.mailgun.net/v3"
-    ),
-}
+#ANYMAIL = {
+ #   "MAILGUN_API_KEY": env("MAILGUN_API_KEY"),
+  #  "MAILGUN_SENDER_DOMAIN": env("MAILGUN_DOMAIN"),
+   # "MAILGUN_API_URL": env(
+    #    "MAILGUN_API_URL", default="https://api.mailgun.net/v3"
+    #),
+#}
 
 
 # Collectfast
@@ -182,3 +182,4 @@ LOGGING = {
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+WHITENOISE_MANIFEST_STRICT = False
