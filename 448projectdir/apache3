@@ -1,9 +1,9 @@
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
-    ServerName nba.cortega2.com
+    ServerName nba.tamarcusdanielcpsc.org
 
     RewriteEngine on
-    RewriteCond %{SERVER_NAME} = nba.cortega2.com
+    RewriteCond %{SERVER_NAME} =nba.tamarcusdanielcpsc.org
     RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 
@@ -11,12 +11,12 @@
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/html
 
-    ServerName nba.cortega2.com
+    ServerName nba.tamarcusdanielcpsc.org
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-    Alias /static/home/students/bhighlan/448project/448projectdir/everycheese/staticfiles
+    Alias /home/students/bhighlan/448project/448projectdir/everycheese/staticfiles>
     <Directory /home/students/bhighlan/448project/448projectdir/everycheese/staticfiles>
         Require all granted
     </Directory>
@@ -27,7 +27,7 @@
         </Files>
     </Directory>
 
-    WSGIDaemonProcess cortega2nba python-home=/home/students/bhighlan/.venvs/django python-path=/home/students/bhighlan/448project/448projectdir/everycheese
-    WSGIProcessGroup cortega2nba
+    WSGIDaemonProcess tdanielnbafantasy bhighlannba python-home=/home/students/bhighlan/.venvs/django python-path=/home/students/bhighlan/448project/448projectdir/everycheese
+    WSGIProcessGroup tdanielnbafantasy
     WSGIScriptAlias / /home/students/bhighlan/448project/448projectdir/everycheese/config/wsgi.py
 </VirtualHost>
