@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}NBA Teams{% endblock title %}
+
+{% block content %}
+
+	<h2>NBA Teams</h2>
+
+<ul>
+
+{% for team in team_list %}
+
+	<li><a href="#TODO">{{ team.name }}</a></li>
+
+{% endfor %}
+
+</ul>
+
+{% endblock content %}
