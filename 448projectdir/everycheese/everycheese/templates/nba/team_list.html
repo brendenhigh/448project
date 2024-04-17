@@ -10,7 +10,7 @@
 
 {% for team in team_list %}
 
-	<li><a href="#TODO">{{ team.name }}</a></li>
+	<li><a href="{% url 'nba:team_detail' team.slug %}">{{ team.team_name }}</a></li>
 
 {% endfor %}
 

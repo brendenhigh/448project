@@ -8,4 +8,9 @@ urlpatterns = [
 		view=views.TeamListView.as_view(),
 		name='team_list'
 	),
+    path (
+        route='<slug:slug>',
+        view=views.TeamDetailView.as_view(),
+        name='team_detail'
+	)
 ]
