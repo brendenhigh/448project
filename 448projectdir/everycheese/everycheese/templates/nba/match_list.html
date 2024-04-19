@@ -10,7 +10,7 @@
 
 {% for match in match_list %}
 
-	<li><a href="#TODO">{{ match.match_name }}</a></li>
+	<li><a href="{% url 'nba:match_detail' match.slug %}">{{ match.match_name }}</a></li>
 
 {% endfor %}
 

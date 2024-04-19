@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}NBA Teams: {{team.team_name }} {% endblock title %}
+{% block title %}NBA Matches: {{match.match_name }} {% endblock title %}
 
 {% block content %}
-    <h2>{{ team.team_name }}</h2>
+    <h2>{{ match.match_name }}</h2>
 
-    {% if team.created_date %}
-        <p>{{ team.created_date }}</p>
+    {% if match.match_date %}
+        <p>{{ match.match_date }}</p>
     {% endif %}
 
-    {% if team.owner %}
-        <p>Team Owner: {{ team.owner }}</p>
+    {% if match.winner_id %}
+        <p>The winner of this match is: {{ match.winner_id }}</p>
     {% endif %}
 
 {% endblock content %}

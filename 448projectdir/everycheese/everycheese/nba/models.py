@@ -15,6 +15,7 @@ class Team(TimeStampedModel):
 
 class Match(TimeStampedModel):
     match_name = models.CharField("Match Name", max_length=255)
+    slug = AutoSlugField("Match Address", unique=True, always_update=False, populate_from="match_name")
     match_date = models.DateField("Match Date", blank=True)
     team_id1 = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team1', null=True)
     team_id2 = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team2', null=True)
