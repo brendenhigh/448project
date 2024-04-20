@@ -8,10 +8,15 @@ urlpatterns = [
         view=views.MatchListView.as_view(), 
         name='match_list'
     ),
-	path (
+    path (
 		route='',
 		view=views.TeamListView.as_view(),
 		name='team_list'
+     ),
+     path (
+		route='add/',
+		view=views.TeamCreateView.as_view(),
+		name='add'
 	),
      path(
         route='matches/<slug:slug>/', 

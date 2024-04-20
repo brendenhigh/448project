@@ -1,6 +1,8 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from .models import Team, Match
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class TeamListView(ListView):
 	model = Team
@@ -13,3 +15,13 @@ class MatchDetailView(DetailView):
 
 class TeamDetailView(DetailView):
 	model = Team
+
+class TeamCreateView(LoginRequiredMixin, CreateView):
+	model = Team
+
+	fields = [
+		'team_name',
+		'created_date',
+	]
+
+	

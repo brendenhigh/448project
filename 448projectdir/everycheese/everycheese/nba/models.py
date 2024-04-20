@@ -2,7 +2,9 @@ from django.db import models
 
 from autoslug import AutoSlugField
 from model_utils.models import TimeStampedModel
+from django.urls import reverse
 from django.conf import settings
+
 
 class Team(TimeStampedModel):
     team_name = models.CharField("Team Name", max_length=255)
@@ -12,6 +14,9 @@ class Team(TimeStampedModel):
     
     def __str__(self):
         return self.team_name
+
+    def get_absolute_url(self):
+        return reverse('nba:team_detail', kwargs={"slug": self.slug})
 
 class Match(TimeStampedModel):
     match_name = models.CharField("Match Name", max_length=255)
