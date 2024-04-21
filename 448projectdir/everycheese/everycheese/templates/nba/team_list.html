@@ -9,31 +9,18 @@
   <h2>NBA Teams</h2>
   <img src="https://user-images.githubusercontent.com/11506653/61015562-1ff45080-a35a-11e9-9b5c-4a824268c3aa.png"
     width="1000"
-<<<<<<< Updated upstream
-    height="500">
-<ul>
-{% for team in team_list %}
-	<li><a href="{% url 'nba:team_detail' team.slug %}">{{ team.team_name }}</a></li>
-{% endfor %}
-
-</ul>
-<p>Want to be part of a team?</p>
-<p>
-	<a class="btn btn-primary"
-		href="{% url 'nba:add' %}" role="button">
-	Add Team
-	</a>
-</p> 
-{% endblock content %}
-=======
     height="450">
-</div>
-<div class="box">
   <ul>
     {% for team in team_list %}
       <li><a href="{% url 'nba:team_detail' team.slug %}">{{ team.team_name }}</a></li>
     {% endfor %}
   </ul>
 </div>
+  <div class = "box">
+  <h1>Want to be part of a team?</h1>
+  <p>
+    <a class="btn btn-primary" href="{% url 'nba:add' %}" role="button">Add Team</a>
+  </p>
+</div>
+</div>
 {% endblock %}
->>>>>>> Stashed changes
