@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}NBA Teams{% endblock title %}
+{% block title %}
+  NBA Teams
+{% endblock %}
 
 {% block content %}
-
-	<h2>NBA Teams</h2>
+<div class="box">
+  <h2>NBA Teams</h2>
   <img src="https://user-images.githubusercontent.com/11506653/61015562-1ff45080-a35a-11e9-9b5c-4a824268c3aa.png"
     width="1000"
+<<<<<<< Updated upstream
     height="500">
 <ul>
 {% for team in team_list %}
@@ -22,3 +25,15 @@
 	</a>
 </p> 
 {% endblock content %}
+=======
+    height="450">
+</div>
+<div class="box">
+  <ul>
+    {% for team in team_list %}
+      <li><a href="{% url 'nba:team_detail' team.slug %}">{{ team.team_name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+>>>>>>> Stashed changes

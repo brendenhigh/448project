@@ -19,7 +19,17 @@ body {
 }
 ul{
   list-style-type: none;
+  text-align: center;
 }
 .nav-link {
   color: #a6a6a6;
+}
+.box {
+  width: 1200px;
+  height: 620px;
+  background-color: #0d1217;
+  border: 3px solid #a6a6a6;
+  text-align: center;
+  padding: 20px;
+  margin: 13px;
 }
