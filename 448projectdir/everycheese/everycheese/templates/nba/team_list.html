@@ -16,11 +16,33 @@
     {% endfor %}
   </ul>
 </div>
-  <div class = "box">
+
+<div class="box">
   <h1>Want to be part of a team?</h1>
-  <p>
-    <a class="btn btn-primary" href="{% url 'nba:add' %}" role="button">Add Team</a>
-  </p>
+  <select id="teamSelector" style="width: 300px;">
+    <option value="">Select a team</option> <!-- Empty option -->
+    <!-- Options will be populated here -->
+  </select>
 </div>
-</div>
+
+<script>
+  // Assuming teams data is fetched from a database
+  var teams = [
+    {% for team in team_list %}
+      { id: "{{ team.id }}", name: "{{ team.team_name }}" }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ];
+
+  var selector = document.getElementById("teamSelector");
+
+  // Populate options
+  teams.forEach(function(team) {
+    var option = document.createElement("option");
+    option.value = team.id;
+    option.text = team.name;
+    selector.appendChild(option);
+  });
+</script>
+
 {% endblock %}
+

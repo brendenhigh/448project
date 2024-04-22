@@ -25,11 +25,13 @@ ul{
   color: #a6a6a6;
 }
 .box {
-  width: 1200px;
-  height: 620px;
+ 
   background-color: #0d1217;
   border: 3px solid #a6a6a6;
   text-align: center;
+  min-width: 1200px; /* Minimum width of the box */
+    max-width: 620px; /* Maximum width of the box */
+    word-wrap: break-word; /* Wraps long words to fit within the box */
   padding: 20px;
   margin: 13px;
 }
