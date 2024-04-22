@@ -20,8 +20,32 @@
   </ul>
 </div>
 
+<div class="box">
+  <h2>Want to be part of a team?</h2>
+  <select id="teamSelector" style="width: 300px;">
+    <option value="">Select a team</option> <!-- Empty option -->
+    <!-- Options will be populated here -->
+  </select>
+</div>
 
+<script>
+  // Assuming teams data is fetched from a database
+  var teams = [
+    {% for team in team_list %}
+      { id: "{{ team.id }}", name: "{{ team.team_name }}" }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ];
 
+  var selector = document.getElementById("teamSelector");
+
+  // Populate options
+  teams.forEach(function(team) {
+    var option = document.createElement("option");
+    option.value = team.id;
+    option.text = team.name;
+    selector.appendChild(option);
+  });
+</script>
 
 {% endblock %}
 
