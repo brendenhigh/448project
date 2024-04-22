@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView, CreateView
 
-from .models import Team, Match
+from .models import Team, Match, UserTeam
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
