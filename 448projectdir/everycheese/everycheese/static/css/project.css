@@ -17,37 +17,29 @@ body {
   color: #a6a6a6;
   text-align: center;
 }
-@media screen and (max-width: 595px) {
-  /* Adjustments for smaller screens, such as phones */
-  body {
-    font-size: 16px; /* Example adjustment */
-  }
-  .box {
-    background-color: #0d1217;
-    border: 3px solid #a6a6a6;
-    text-align: center;
-    min-width: 500px; /* Minimum width of the box */
-      max-width: 520px; /* Maximum width of the box */
-      word-wrap: break-word; /* Wraps long words to fit within the box */
-    padding: 20px;
-    margin: 13px;
-  }
-}
-ul{
+
+ul {
   list-style-type: none;
   text-align: center;
 }
+
 .nav-link {
   color: #a6a6a6;
 }
+
 .box {
   background-color: #0d1217;
   border: 3px solid #a6a6a6;
   text-align: center;
-  min-width: 1200px; /* Minimum width of the box */
-    max-width: 620px; /* Maximum width of the box */
-    word-wrap: break-word; /* Wraps long words to fit within the box */
-  padding: 20px;
-  margin: 13px;
+  padding: 2%; /* Adjust padding */
+  margin: 2%; /* Adjust margin */
 }
+
+@media (min-width: 768px) { /* Example breakpoint for tablets */
+  .box {
+    padding: 20px; /* Reset padding for larger screens */
+    margin: 13px; /* Reset margin for larger screens */
+  }
+}
+
 
