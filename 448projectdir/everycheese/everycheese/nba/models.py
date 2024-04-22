@@ -33,5 +33,7 @@ class Match(TimeStampedModel):
 class User():
     team = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
-
+class UserTeam(TimeStampedModel):
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+	team_name = models.ForeignKey(Team, on_delete=models.CASCADE, null=True)
 	
