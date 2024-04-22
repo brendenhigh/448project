@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Join a Team{% endblock title %}
+{% block content %}
+<h1>Join a Team</h1>
+<form method="post" action="{% url 'nba:add' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Join</button>
+</form>
+{% endblock content %}
