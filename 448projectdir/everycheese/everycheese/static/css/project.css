@@ -26,8 +26,10 @@ li {
   display: inline-block;
   margin-right: 10px; /* Adjust spacing between items */
 }
-
 .nav-link {
+  color: #a6a6a6;
+}
+.navbar .navbar-brand {
   color: #a6a6a6;
 }
 
