@@ -19,6 +19,10 @@ body {
   padding: 0;
 }
 
+.box ul {
+  list-style-type: none;
+  text-align: center;
+}
 ul {
   list-style-type: none;
   text-align: center;
@@ -26,11 +30,15 @@ ul {
 li {
   display: inline-block;
   margin-right: 10px; /* Adjust spacing between items */
+}
+.box li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between items */
   border-right: 1px solid #a6a6a6; /* Add a border to the right of each list item */
   padding-right: 10px; 
 }
 
-li:last-child {
+.box li:last-child {
   border-right: none;
 }
 
