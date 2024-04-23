@@ -33,8 +33,8 @@ li {
 }
 .box li {
   display: inline-block;
-  margin-right: 10px; /* Adjust spacing between items */
-  border-right: 1px solid #a6a6a6; /* Add a border to the right of each list item */
+  margin-right: 10px; 
+  border-right: 1px solid #a6a6a6; 
   padding-right: 10px; 
 }
 
