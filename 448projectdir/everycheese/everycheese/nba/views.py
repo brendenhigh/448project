@@ -24,4 +24,4 @@ class TeamCreateView(LoginRequiredMixin, CreateView):
 		'created_date',
 	]
 
-	
+

@@ -3,14 +3,45 @@
 {% block title %}NBA Matches: {{match.match_name }} {% endblock title %}
 
 {% block content %}
+<div class="box">
     <h2>{{ match.match_name }}</h2>
 
     {% if match.match_date %}
-        <p>{{ match.match_date }}</p>
+        <p>Match Date: {{ match.match_date }}</p>
     {% endif %}
 
     {% if match.winner_id %}
-        <p>The winner of this match is: {{ match.winner_id }}</p>
+        <p>Winner: {{ match.winner_id }}</p>
     {% endif %}
+    {% if match.score %}
+        <p>Game Score: {{ match.score }}</p>
+    {% endif %}
+    </div>
+
+    <div class="box">
+    <h4>{{ match.team_id1 }} Stats:</h4>
+    {% if match.team1_assists %}
+    <p>Assists: {{ match.team1_assists}}</p>
+{% endif %}
+{% if match.team1_rebounds %}
+    <p>Rebounds: {{ match.team1_rebounds}}</p>
+{% endif %}
+{% if match.team1_shooting %}
+    <p>Field Goal Percentage: {{ match.team1_shooting}}%</p>
+{% endif %}
+    </div>
+
+    <div class="box">
+<h4>{{ match.team_id2 }} Stats:</h4>
+{% if match.team2_assists %}
+    <p>Assists: {{ match.team2_assists}}</p>
+{% endif %}
+{% if match.team2_rebounds %}
+    <p>Rebounds: {{ match.team2_rebounds}}</p>
+{% endif %}
+{% if match.team2_shooting %}
+    <p>Field Goal Percentage: {{ match.team2_shooting}}%</p>
+{% endif %}
+    </div>
 
 {% endblock content %}

@@ -26,6 +26,15 @@ class Match(TimeStampedModel):
     team_id2 = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team2', null=True)
     winner_id = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='winner', null=True)
     created_date = models.DateField("Date Created:", blank=True)
+    team1_assists = models.IntegerField("Team 1 Assists", default=0)
+    team2_assists = models.IntegerField("Team 2 Assists", default=0)
+    team1_rebounds = models.IntegerField("Team 1 Rebounds", default=0)
+    team2_rebounds = models.IntegerField("Team 2 Rebounds", default=0)
+    team1_shooting = models.IntegerField("Team 1 Shooting", default=0)
+    team2_shooting = models.IntegerField("Team 2 Shooting", default=0)
+    score = models.CharField("Score", max_length=255, blank=True, null=True)
+    
+
     
     def __str__(self):
         return self.match_name
