@@ -23,5 +23,9 @@ class TeamCreateView(LoginRequiredMixin, CreateView):
 		'team_name',
 		'created_date',
 	]
+class UserListView(ListView):
+    model = UserTeam
 
+class UserDetailView(DetailView):
+    model = UserTeam
 

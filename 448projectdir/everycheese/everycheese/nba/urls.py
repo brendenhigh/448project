@@ -8,6 +8,11 @@ urlpatterns = [
         view=views.MatchListView.as_view(), 
         name='match_list'
     ),
+    path(
+        route='userteams/', 
+        view=views.MatchListView.as_view(), 
+        name='userteam_list'
+    ),
     path (
 		route='',
 		view=views.TeamListView.as_view(),
@@ -23,6 +28,11 @@ urlpatterns = [
         view=views.MatchDetailView.as_view(), 
         name='match_detail'
     ),
+    path (
+        route='userteams/<slug:slug>',
+        view=views.TeamDetailView.as_view(),
+        name='userteam_detail'
+	),
     path (
         route='<slug:slug>',
         view=views.TeamDetailView.as_view(),
