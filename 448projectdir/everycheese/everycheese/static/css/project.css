@@ -34,7 +34,7 @@ li {
 .box li {
   display: inline-block;
   margin-right: 10px; 
-  border-right: 1px solid #a6a6a6; 
+  border-right: 2px solid #a6a6a6; 
   padding-right: 10px; 
 }
 
