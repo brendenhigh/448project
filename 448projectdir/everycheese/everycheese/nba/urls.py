@@ -13,11 +13,6 @@ urlpatterns = [
 		view=views.TeamListView.as_view(),
 		name='team_list'
      ),
-     path (
-		route='add/',
-		view=views.TeamCreateView.as_view(),
-		name='add'
-	),
      path(
         route='matches/<slug:slug>/', 
         view=views.MatchDetailView.as_view(), 

@@ -1,6 +1,8 @@
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, UpdateView
 
 from .models import Team, Match
+
+from everycheese.users.models import User
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -16,11 +18,16 @@ class MatchDetailView(DetailView):
 class TeamDetailView(DetailView):
 	model = Team
 
-class TeamCreateView(LoginRequiredMixin, CreateView):
-	model = Team
+class TeamUpdateView(UpdateView):
+	model = User
 
 	fields = [
-		'team_name',
-		'created_date',
+		'team',
 	]
+	
+	action = "Update"
+
+	def form_valid(self, form):
+		form.instance.creator = self.request.user
+		return super().form_valid(form)
 
