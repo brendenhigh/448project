@@ -3,17 +3,47 @@
 {% block title %}NBA Teams: {{team.team_name }} {% endblock title %}
 
 {% block content %}
+<div class="box">
     <h2>{{ team.team_name }}</h2>
-
-    {% if team.created_date %}
-        <p>{{ team.created_date }}</p>
-    {% endif %}
-
-    {% if team.owner_id %}
-        <p>Team Owner: {{ team.owner_id }}</p>
-    {% endif %}
     {% if team.standings %}
     <p>Team Standings: {{ team.standings }}</p>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 40%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="eager" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDiv_HgEk&#x2F;FHn2OChSbuRhqrliAYqDvA&#x2F;view?embed">
+  </iframe>
+</div>
 {% endif %}
 
+    {% if team.avg_assists %}
+    <p>Assists: {{ team.avg_assists}}</p>
+{% endif %}
+<div style="position: relative; width: 100%; height: 0; padding-top: 40%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="eager" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDPUcWDzk&#x2F;wb7wJlSBqnXtH0ssyWaAgQ&#x2F;view?embed">
+  </iframe>
+</div>
+{% if team.avg_rebounds %}
+    <p>Rebounds: {{ team.avg_rebounds}}</p>
+{% endif %}
+<div style="position: relative; width: 100%; height: 0; padding-top: 40%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="eager" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDPQg-N7A&#x2F;vk1oFGWQky8IXqn4jfpitw&#x2F;view?embed">
+  </iframe>
+</div>
+{% if team.avg_shootings %}
+    <p>Field Goal Percentage: {{ team.avg_shootings}}%</p>
+{% endif %}
+<div style="position: relative; width: 100%; height: 0; padding-top: 40%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="eager" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGDPQNqiQQ&#x2F;-LllvqTQvCSlWmulZgSJug&#x2F;view?embed">
+  </iframe>
+</div>
+    </div>
 {% endblock content %}

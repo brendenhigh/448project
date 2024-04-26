@@ -14,13 +14,31 @@
     </p>   
 </div>
 
-
-{% for user in user_list %}	
-	<li>{{ user.name }}</li>
-        <li>{{ user.team.team_name }}</li>
-	<li>{{ user.team.points }}</li>
-{% endfor %}
-	
+<div class="box1">
+    <h1>Leaderboard</h1>
+    <div class="space-block"></div>
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Team Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody class="ranking-list">
+        {% for user in user_list %}  
+          <tr>
+            <td></td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.team.team_name }}</td>
+            <td>{{ user.team.points }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
 
 
 {% endblock content %}
