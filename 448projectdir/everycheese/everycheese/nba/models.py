@@ -11,6 +11,11 @@ class Team(TimeStampedModel):
     slug = AutoSlugField("Team Address", unique=True, always_update=False, populate_from="team_name")
     created_date = models.DateField("Date Created:", blank=True)
     points = models.IntegerField("Points:", blank=True, null=True)
+    standings = models.CharField("Standing:", max_length=10, blank=True, null=True)
+    avg_assists = models.IntegerField("Average Assists:", blank=True, null=True)
+    avg_rebounds = models.IntegerField("Average Rebounds:", blank=True, null=True)
+    avg_shootings = models.IntegerField("Average Shootings:", blank=True, null=True)
+
 
     def __str__(self):
         return self.team_name
