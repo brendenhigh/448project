@@ -12,5 +12,8 @@
     {% if team.owner_id %}
         <p>Team Owner: {{ team.owner_id }}</p>
     {% endif %}
+    {% if team.standings %}
+    <p>Team Owner: {{ team.standings }}</p>
+{% endif %}
 
 {% endblock content %}
