@@ -10,6 +10,7 @@ class Team(TimeStampedModel):
     team_name = models.CharField("Team Name", max_length=255)
     slug = AutoSlugField("Team Address", unique=True, always_update=False, populate_from="team_name")
     created_date = models.DateField("Date Created:", blank=True)
+    points = models.IntegerField("Points:", blank=True, null=True)
 
     def __str__(self):
         return self.team_name
@@ -21,7 +22,6 @@ class Match(TimeStampedModel):
     match_name = models.CharField("Match Name", max_length=255)
     slug = AutoSlugField("Match Address", unique=True, always_update=False, populate_from="match_name")
     match_date = models.DateField("Match Date", blank=True)
-    teams = models.ManyToManyField(Team, related_name='matches')
     winner_id = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='won_matches', null=True, blank=True)
     created_date = models.DateField("Date Created:", blank=True)
     team1_assists = models.IntegerField("Team 1 Assists", default=0)

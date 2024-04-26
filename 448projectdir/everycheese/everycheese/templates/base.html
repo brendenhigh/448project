@@ -48,7 +48,7 @@
 	      <a class="nav-link" href="{% url 'nba:match_list' %}">Matches</a>
 	    </li>
       <li class="nav-item">
-	      <a class="nav-link" href="{% url 'about' %}">Rankings</a>
+	      <a class="nav-link" href="{% url 'users:user_list' %}">Rankings</a>
 	    </li>
             {% if request.user.is_authenticated %}
               <li class="nav-item">

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Rankings {% endblock title %}
+
+{% block content %}
+<div class = "box">
+    <h1>Rankings</h1>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 40%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+        <iframe loading="eager" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGB7JfqXos&#x2F;3fAqCkn59YNs2nIo183YGQ&#x2F;view?embed"></iframe>
+    </div>
+    <p>Here under Rankings find where you stand for the week amongst your friends and many others within the league!
+        Ranking are based off of either if your team won their matchup or not. 
+        The more wins your team has, the points you will rack up to reach the top of the leaderboard!
+    </p>   
+</div>
+
+
+{% for user in user_list %}	
+	<li>{{ user.name }}</li>
+        <li>{{ user.team.team_name }}</li>
+	<li>{{ user.team.points }}</li>
+{% endfor %}
+	
+
+
+{% endblock content %}

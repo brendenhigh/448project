@@ -10,7 +10,7 @@ from everycheese.users.views import (
 app_name = "users"
 urlpatterns = [
     path(
-        route = "users",
+        route = "users/",
         view=user_list_view,
         name="user_list"
     ),

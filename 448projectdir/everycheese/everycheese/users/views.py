@@ -13,6 +13,8 @@ User = get_user_model()
 class UserListView(ListView):
 	model = User
 
+	ordering = "-team__points"
+
 user_list_view = UserListView.as_view()
 
 
